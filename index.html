@@ -147,24 +147,31 @@
     <section id="proyectos">
         <h2>> Proyectos_Activos</h2>
         <div class="grid">
-            <!-- Proyecto Panadería -->
-    <div class="card" onclick="openModal('img/Panaderia.png')">
-        <h3>Sistema de Panadería</h3>
-        <p>Control de inventario y punto de venta.</p>
-        <span class="tags">[ Clic para ver captura ]</span>
-    </div>
-    <div class="card" onclick="openModal('img/Restaurante.png')">
-        <h3>Gestor de Restaurante</h3>
-        <p>App de pedidos y gestión de cocina.</p>
-        <span class="tags">[ Clic para ver captura ]</span>
-    </div>
+    
+            <div class="card" onclick="openModal('img/panaderia.png')">
+                <img src="img/panaderia.png" alt="Vista previa Sistema Panadería" class="card-img" style="width:100%; border-radius:5px; border:1px solid #00f3ff; margin-bottom:15px; max-height: 180px; object-fit: cover;">
+                
+                <h3>Sistema de Panadería</h3>
+                <p>Control de inventario y punto de venta (POS) para optimización operativa.</p>
+                <span class="tags">[ Clic para ampliar captura ]</span>
+            </div>
+        
+            <div class="card" onclick="openModal('img/restaurante.png')">
+                <img src="img/restaurante.png" alt="Vista previa Gestor Restaurante" class="card-img" style="width:100%; border-radius:5px; border:1px solid #00f3ff; margin-bottom:15px; max-height: 180px; object-fit: cover;">
+                
+                <h3>Gestor de Restaurante</h3>
+                <p>App de pedidos con visualización dinámica para cocina (KDS).</p>
+                <span class="tags">[ Clic para ampliar captura ]</span>
+            </div>
+        
             <div class="card" onclick="openModal('img/soluciones.png')">
-                <img src="img/soluciones.png" alt="Arquitectura de Soluciones Corporativas" class="card-img" style="width:100%; border-radius:5px; border:1px solid #00f3ff; margin-bottom:10px;">
+                <img src="img/soluciones.png" alt="Vista previa Soluciones Corporativas" class="card-img" style="width:100%; border-radius:5px; border:1px solid #00f3ff; margin-bottom:15px; max-height: 180px; object-fit: cover;">
                 
                 <h3>Soluciones Corporativas</h3>
-                <p>Automatización de procesos, gestión de bases de datos y soporte técnico especializado para entornos institucionales.</p>
-                <span class="tags">[ Java / Soporte IT / SQL ]</span>
+                <p>Automatización de procesos, gestión de bases de datos y soporte técnico especializado.</p>
+                <span class="tags">[ Clic para ampliar esquema ]</span>
             </div>
+        
         </div>
         <div id="imageModal" style="display:none; position:fixed; z-index:100; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;" onclick="this.style.display='none'">
             <img id="modalImg" style="max-width:90%; max-height:80%; border:2px solid #00f3ff;">
