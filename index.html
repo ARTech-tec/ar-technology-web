@@ -19,6 +19,13 @@
             color: var(--text-main);
             font-family: 'Courier New', Courier, monospace;
             overflow-x: hidden;
+            width: 100%;
+        }
+        .container {
+            max-width: 1000px; /* O el ancho que prefieras */
+            margin: 0 auto;    /* Esto es lo que centra el contenido */
+            padding: 0 15px;   /* Un pequeño margen para que no toque los bordes en móviles */
+            box-sizing: border-box;
         }
         /* Sección Principal */
         header {
@@ -78,8 +85,11 @@
         /* Grid de Proyectos */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* En móviles (menos de 600px), usamos 1 sola columna. En pantallas grandes, automático. */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
             gap: 20px;
+            width: 100%;
+            box-sizing: border-box
         }
         .card {
             background-color: var(--surface-color);
