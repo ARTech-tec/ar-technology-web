@@ -114,14 +114,23 @@
             border: 1px solid var(--text-muted);
             color: var(--text-main);
         }
+        .logo-img {
+            filter: drop-shadow(0 0 5px #00f3ff); /* Un leve brillo cian */
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05); /* Un efecto sutil al pasar el mouse */
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>AR Technology</h1>
-        <p class="subtitle">Desarrollo de Software | Soluciones Tecnológicas Avanzadas | Soporte Técnico</p>
-        <a href="#proyectos" class="btn">Inicializar Sistema</a>
+    <header style="text-align: center; padding: 50px 0;">
+        <img src="img/logo.png" alt="Logo AR Technology" style="max-width: 150px; margin-bottom: 10px;">
+        
+        <h1 class="logo-text">AR TECHNOLOGY</h1>
+        <p>Desarrollo de Software | Soluciones Tecnológicas<br>Avanzadas | Soporte Técnico</p>
     </header>
 
     <section id="proyectos">
