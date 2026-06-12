@@ -128,25 +128,24 @@
         <h2>> Proyectos_Activos</h2>
         <div class="grid">
             <!-- Proyecto Panadería -->
-    <div class="card">
-        <img src="img/Panaderia.png" alt="Sistema de Panadería" style="width:100%; border:1px solid #00f3ff; margin-bottom:10px;">
+    <div class="card" onclick="openModal('img/panaderia.png')">
         <h3>Sistema de Panadería</h3>
-        <p>Control de inventario y punto de venta (POS) para optimización operativa.</p>
-        <span class="tags">[ Apps Script / Google Sheets ]</span>
+        <p>Control de inventario y punto de venta.</p>
+        <span class="tags">[ Clic para ver captura ]</span>
     </div>
-
-    <!-- Proyecto Restaurante -->
-    <div class="card">
-        <img src="img/Restaurante.png" alt="Gestor de Restaurante" style="width:100%; border:1px solid #00f3ff; margin-bottom:10px;">
+    <div class="card" onclick="openModal('img/restaurante.png')">
         <h3>Gestor de Restaurante</h3>
-        <p>App de pedidos con visualización dinámica para cocina (KDS).</p>
-        <span class="tags">[ Web Architecture ]</span>
+        <p>App de pedidos y gestión de cocina.</p>
+        <span class="tags">[ Clic para ver captura ]</span>
     </div>
             <div class="card">
                 <h3>Soluciones Corporativas</h3>
                 <p>Automatización de flujos de trabajo, gestión de bases de datos y soporte técnico especializado para entornos institucionales.</p>
                 <span class="tags">[ Java / Soporte IT ]</span>
             </div>
+        </div>
+        <div id="imageModal" style="display:none; position:fixed; z-index:100; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;" onclick="this.style.display='none'">
+            <img id="modalImg" style="max-width:90%; max-height:80%; border:2px solid #00f3ff;">
         </div>
     </section>
 
@@ -161,6 +160,13 @@
             <div class="skill-tag">Diseño de Identidad Visual</div>
         </div>
     </section>
-
+<script>
+    function openModal(imgSrc) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        modalImg.src = imgSrc;
+        modal.style.display = 'flex';
+    }
+</script>
 </body>
 </html>
