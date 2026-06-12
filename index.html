@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Technology | Portafolio</title>
+    <style>
+        :root {
+            --bg-color: #050505; /* Negro profundo */
+            --neon-blue: #00f3ff; /* Azul cian eléctrico */
+            --text-main: #ffffff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            /* Efecto de luz de neón en el texto */
+            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+        }
+        p {
+            font-size: 1.2rem;
+            color: #aaaaaa;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: var(--neon-blue);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
+        }
+    </style>
+</head>
+<body>
+    <h1>AR Technology</h1>
+    <p>Desarrollo de Software | Soluciones Tecnológicas Avanzadas | Soporte Técnico</p>
+    <a href="#" class="btn">Inicializar Sistema</a>
+</body>
+</html>
