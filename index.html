@@ -6,9 +6,11 @@
     <title>AR Technology | Portafolio</title>
     <style>
         :root {
-            --bg-color: #050505; /* Negro profundo */
-            --neon-blue: #00f3ff; /* Azul cian eléctrico */
+            --bg-color: #050505;
+            --surface-color: #111111;
+            --neon-blue: #00f3ff;
             --text-main: #ffffff;
+            --text-muted: #aaaaaa;
         }
         body {
             margin: 0;
@@ -16,24 +18,28 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Courier New', Courier, monospace;
+            overflow-x: hidden;
+        }
+        /* Sección Principal */
+        header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             text-align: center;
+            border-bottom: 1px solid #222;
         }
         h1 {
             font-size: 4rem;
             letter-spacing: 5px;
             text-transform: uppercase;
             margin-bottom: 10px;
-            /* Efecto de luz de neón en el texto */
             text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
         }
-        p {
+        p.subtitle {
             font-size: 1.2rem;
-            color: #aaaaaa;
+            color: var(--text-muted);
             max-width: 600px;
             line-height: 1.5;
         }
@@ -55,11 +61,101 @@
             color: var(--bg-color);
             box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
         }
+        /* Contenedor de Secciones */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            border-bottom: 2px solid var(--neon-blue);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+        /* Grid de Proyectos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid #333;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .tags {
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            display: block;
+        }
+        /* Habilidades */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skill-tag {
+            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-main);
+        }
     </style>
 </head>
 <body>
-    <h1>AR Technology</h1>
-    <p>Desarrollo de Software | Soluciones Tecnológicas Avanzadas | Soporte Técnico</p>
-    <a href="#" class="btn">Inicializar Sistema</a>
+
+    <header>
+        <h1>AR Technology</h1>
+        <p class="subtitle">Desarrollo de Software | Soluciones Tecnológicas Avanzadas | Soporte Técnico</p>
+        <a href="#proyectos" class="btn">Inicializar Sistema</a>
+    </header>
+
+    <section id="proyectos">
+        <h2>> Proyectos_Activos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sistema de Panadería</h3>
+                <p>Plataforma web integral para el control de inventario y módulo de punto de venta (POS) para optimización de procesos comerciales.</p>
+                <span class="tags">[ HTML / CSS / Apps Script ]</span>
+            </div>
+            <div class="card">
+                <h3>Gestor de Restaurante</h3>
+                <p>Aplicación de pedidos interactiva con gestión de menú dinámico y visualización en tiempo real para operaciones de cocina (KDS).</p>
+                <span class="tags">[ Arquitectura Web / Base de Datos ]</span>
+            </div>
+            <div class="card">
+                <h3>Soluciones Corporativas</h3>
+                <p>Automatización de flujos de trabajo, gestión de bases de datos y soporte técnico especializado para entornos institucionales.</p>
+                <span class="tags">[ Java / Soporte IT ]</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>> Protocolos_y_Habilidades</h2>
+        <div class="skills-list">
+            <div class="skill-tag">Java (float/double config)</div>
+            <div class="skill-tag">Google Apps Script</div>
+            <div class="skill-tag">Google Sheets Automations</div>
+            <div class="skill-tag">HTML5 & CSS3</div>
+            <div class="skill-tag">Gerencia de Soporte Técnico</div>
+            <div class="skill-tag">Diseño de Identidad Visual</div>
+        </div>
+    </section>
+
 </body>
 </html>
